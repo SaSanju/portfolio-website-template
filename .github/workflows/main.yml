@@ -30,4 +30,5 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-        run: echo "n" | vercel --token $VERCEL_TOKEN --prod --scope $VERCEL_ORG_ID
+          VERCEL_PROJECT_ID: portfolio-vercel-project-01
+        run: echo "n" | vercel --token $VERCEL_TOKEN --prod --scope $VERCEL_ORG_ID --build-env VERCEL_PROJECT_ID=$VERCEL_PROJECT_ID
