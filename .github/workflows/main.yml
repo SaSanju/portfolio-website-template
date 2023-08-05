@@ -18,8 +18,14 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
+
       - name: Install Vercel CLI
-        run: npm install -g vercel
+        run: pnpm add --global vercel@latest
 
       - name: Install dependencies and build
         run: |
