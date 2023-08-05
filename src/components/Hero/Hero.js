@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
@@ -10,10 +11,18 @@ const Hero = (props) => (
       <LeftSection>
         <SectionTitle main center>
           Welcome To <br />
-          My Personal Portfolio
+          <Typewriter
+            options={{
+              strings: ['Sayak Bhattacharya\'s Portfolio'],
+              cursor: "_",
+              cursorClassName: "Typewriter_cursor",
+              autoStart: true,
+              loop: true
+            }}
+          />
         </SectionTitle>
         <SectionText>
-        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+          Showcasing JavaScript development skills featuring awesome apps.
         </SectionText>
         <Button onClick={props.handleClick}>Learn More</Button>
       </LeftSection>
