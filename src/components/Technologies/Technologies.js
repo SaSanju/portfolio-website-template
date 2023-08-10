@@ -61,7 +61,6 @@ const Technologies = () => (
         </ListContainer>
       </ListItem>
     </List>
-    <SectionDivider colorAlt />
   </Section>
 );
 
